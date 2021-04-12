@@ -4,24 +4,24 @@ import java.time.Instant;
  * @author Aneesh Pothuru and Edgar Villanueva
  * @version April 2021
  */
-public class Block<T> {
+public final class Block<T> {
     /**
      * hash uses SHA256 to get encryption string
      */
-    private String hash;
+    private final String hash;
     /**
      * prevHash uses SHA256 to get encryption string and is the hash of previous
      * data
      */
-    private String prevHash;
+    private final String prevHash;
     /**
      * data is a generic object
      */
-    private T data;
+    private final T data;
     /**
      * utcCreated is the time it was created in UTC time
      */
-    private long utcCreated;
+    private final long utcCreated;
 
     /**
      * @param data
@@ -50,24 +50,10 @@ public class Block<T> {
     }
 
     /**
-     * @param hash
-     */
-    public void setHash(String hash) {
-        this.hash = hash;
-    }
-
-    /**
      * @return prevHash
      */
     public String getPrevHash() {
         return prevHash;
-    }
-
-    /**
-     * @param prevHash
-     */
-    public void setPrevHash(String prevHash) {
-        this.prevHash = prevHash;
     }
 
     /**
