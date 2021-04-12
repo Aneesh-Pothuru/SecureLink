@@ -21,7 +21,7 @@ public class Encrypt {
 
     /**
      * @param data
-     * @return
+     * @return String of encrypted data
      */
     public static String SHA256(String data) {
         BigInteger number = new BigInteger(1, data.getBytes());
