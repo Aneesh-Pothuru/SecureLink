@@ -24,7 +24,7 @@ public class Encrypt {
      * @return String of encrypted data
      */
     public static String SHA256(String data) {
-        BigInteger number = new BigInteger(1, data.getBytes());
+        BigInteger number = new BigInteger(1, this.getBytes(data));
         StringBuilder hex = new StringBuilder(number.toString(16));
         while (hex.length() < 32) {
             hex.insert(0, '0');
